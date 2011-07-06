@@ -14,7 +14,7 @@ import android.util.Log;
  * <li>populate the menu
  * <li>build a dialog
  * <li>reference a view from java
- * <li>use logging the android way
+ * <li>use logging the android way (DONE)
  * 
  * @author michael
  */
