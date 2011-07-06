@@ -21,9 +21,9 @@ import android.util.Log;
 public class TemplateActivity extends Activity {
 	
 	// each class should have a unique log tag
-	private static final String LOG_TAG = "LocationSearchActivity";
+	private static final String LOG_TAG = "TemplateActivity";
 	
-	private TemplateApplication application;
+	private AppSingleton application;
     
     @Override
     public void onCreate(final Bundle savedInstanceState) {
@@ -31,7 +31,7 @@ public class TemplateActivity extends Activity {
     		Log.d(LOG_TAG, "onCreate()");
     	}
         super.onCreate(savedInstanceState);
-        application = (TemplateApplication) getApplication();
+        application = (AppSingleton) getApplication();
         setContentView(R.layout.main);
     }
     

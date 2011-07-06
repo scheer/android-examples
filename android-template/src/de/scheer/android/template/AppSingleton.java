@@ -4,9 +4,9 @@ import android.app.Application;
 import android.content.SharedPreferences;
 
 /**
- * Holds global data.
+ * Holds global application state.
  */
-public class TemplateApplication extends Application {
+public class AppSingleton extends Application {
 	
 	private String somePreference;
 	
@@ -31,6 +31,7 @@ public class TemplateApplication extends Application {
 	}
 
 	public void setSomePreference(final String somePreference) {
+		// TODO save here
 		this.somePreference = somePreference;
 	}
 	
