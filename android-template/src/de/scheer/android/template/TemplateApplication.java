@@ -22,8 +22,7 @@ public class TemplateApplication extends Application {
 	}
 	
 	public void loadPreferences() {
-		final SharedPreferences pref = getSharedPreferences(this.getPackageName() +  "_preferences", MODE_PRIVATE);
-        
+		final SharedPreferences pref = getSharedPreferences(this.getPackageName() +  "_preferences", MODE_PRIVATE);      
 		somePreference = pref.getString("some_preference", "default");  
 	}
 
