@@ -43,7 +43,6 @@ public class TemplateActivity extends Activity {
     	}
 		super.onResume();
 		startSomeService();
-		application.loadPreferences();
 	}
 
     @Override
