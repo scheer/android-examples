@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hello">Hello World, TemplateActivity!</string>
-    <string name="app_name">android-template</string>
+
+	<string name="app_name">android-template</string>
+	<string name="hello">Hello World, TemplateActivity!</string>
+
+	<!-- Info Dialog -->
+	<string name="info_dialog_author">Author: Michael Scheer</string>
+	<string name="info_dialog_dev_text">This application is under active development.
+		Please report any suggestions, errors and improvements. Thanks!
+	</string>
+	<string name="info_dialog_terms_text">This demo app is developed
+		with great care. However, errors cannot be excluded and I take no
+		liability for the usage of my app.
+		Especially I take no liability for any damage, losses and
+		drawbacks related to the usage of my app.</string>
 </resources>

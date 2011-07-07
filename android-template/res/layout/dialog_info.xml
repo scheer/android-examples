@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/about_scrollview" android:layout_height="fill_parent"
+	android:layout_width="fill_parent">
+
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="vertical" android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+
+		<View android:layout_width="fill_parent" android:layout_height="10dp" />
+
+		<TextView android:id="@+id/about_author" android:gravity="center_horizontal"
+			android:text="@string/info_dialog_author"
+			android:layout_width="fill_parent" android:layout_height="fill_parent"
+			android:linksClickable="true" android:autoLink="email" />
+
+		<View android:layout_width="fill_parent" android:layout_height="10dp" />
+
+		<TextView android:id="@+id/about_dev" android:gravity="center_horizontal"
+			android:text="@string/info_dialog_dev_text" android:layout_width="fill_parent"
+			android:layout_height="fill_parent" android:linksClickable="true"
+			android:autoLink="web" />
+			
+		<View android:layout_width="fill_parent" android:layout_height="10dp" />
+
+		<TextView android:id="@+id/about_terms" android:gravity="center_horizontal"
+			android:text="@string/info_dialog_terms_text" android:layout_width="fill_parent"
+			android:layout_height="fill_parent" android:linksClickable="true"
+			android:autoLink="web" android:typeface="monospace"/>
+
+	</LinearLayout>
+</ScrollView>
