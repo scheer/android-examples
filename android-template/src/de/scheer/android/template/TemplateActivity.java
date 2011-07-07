@@ -3,18 +3,20 @@ package de.scheer.android.template;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
 
 /**
  * Showcase of a simple android app.<p>
  * 
  * demonstrates how to:<br>
+ * <li>use logging the android way (DONE)
+ * <li>populate the menu (DONE)
+ * <li>build a dialog
  * <li>switch between two activities with explicit intent
  * <li>manage preferences
  * <li>i18n
- * <li>populate the menu
- * <li>build a dialog
+ * <li>use list adapters
  * <li>reference a view from java
- * <li>use logging the android way (DONE)
  * 
  * @author michael
  */
@@ -22,6 +24,12 @@ public class TemplateActivity extends Activity {
 	
 	// each class should have a unique log tag
 	private static final String LOG_TAG = "TemplateActivity";
+	
+	private static final int MENU_NEXT = 1;
+	
+	private static final int MENU_PREFERENCES = 2;
+	
+	private static final int MENU_INFO = 3;	
 	
 	private AppSingleton application;
     
@@ -52,6 +60,25 @@ public class TemplateActivity extends Activity {
     	}
 		super.onPause();
 		stopSomeService();
+	}
+    
+    /**
+     * Use the standard android icons for the menu at all times.<p>
+     * For a good overview, which icons are available have a look at:<br>
+     * http://androiddrawableexplorer.appspot.com/
+     */
+    @Override
+	public boolean onCreateOptionsMenu(final Menu menu) {
+    	if (Logging.isEnabled) {     		
+    		Log.d(LOG_TAG, "onCreateOptionsMenu()");	
+    	}
+    	menu.add(Menu.NONE, MENU_NEXT, Menu.NONE, "Next").setIcon(
+    			android.R.drawable.ic_menu_directions);
+		menu.add(Menu.NONE, MENU_PREFERENCES, Menu.NONE, "Preferences")
+				.setIcon(android.R.drawable.ic_menu_preferences);
+		menu.add(Menu.NONE, MENU_INFO, Menu.NONE, "Info").setIcon(
+				android.R.drawable.ic_menu_info_details);
+		return true;
 	}
     
 	private void startSomeService() {
