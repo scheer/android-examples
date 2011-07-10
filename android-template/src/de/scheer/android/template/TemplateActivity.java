@@ -22,7 +22,12 @@ import android.view.MenuItem;
  * <li>manage preferences
  * <li>i18n
  * <li>use list adapters
- * <li>how to use services
+ * <li>how to use services<p>
+ * <br>
+ * other ideas for sample apps:<br>
+ * <li>location-aware app (Reto´s blog)
+ * <li>widget example app
+ * <li>live wallpaper example app
  * 
  * @author michael
  */
