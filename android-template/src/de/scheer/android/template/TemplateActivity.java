@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 /**
  * Showcase of a simple android app.<p>
@@ -17,12 +18,13 @@ import android.view.MenuItem;
  * <li>use logging the android way (DONE)
  * <li>populate the options menu (DONE)
  * <li>build a generic info dialog (DONE)
- * <li>reference a view from java
+ * <li>reference a view from java (DONE)
+ * <li>i18n
  * <li>switch between two activities with explicit intent
  * <li>manage preferences
- * <li>i18n
  * <li>use list adapters
- * <li>how to use services<p>
+ * <li>how to use services
+ * <p>
  * <br>
  * other ideas for sample apps:<br>
  * <li>location-aware app (Reto´s blog)
@@ -45,6 +47,8 @@ public class TemplateActivity extends Activity {
 	private static final int DIALOG_INFO = 100;
 	
 	private AppSingleton application;
+	
+	private Button testButton;
     
     @Override
     public void onCreate(final Bundle savedInstanceState) {
@@ -54,6 +58,7 @@ public class TemplateActivity extends Activity {
         super.onCreate(savedInstanceState);
         application = (AppSingleton) getApplication();
         setContentView(R.layout.main);
+        testButton = (Button) findViewById(R.id.testButton);
     }
     
     // is also called after onCreate()

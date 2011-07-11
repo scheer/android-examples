@@ -2,7 +2,9 @@
 <resources>
 
 	<string name="app_name">android-template</string>
-	<string name="hello">Hello World, TemplateActivity!</string>
+	
+	<!-- Main Screen -->
+	<string name="button_test">Click Me!</string>
 
 	<!-- Info Dialog -->
 	<string name="info_dialog_author">Author: Michael Scheer</string>
