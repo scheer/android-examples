@@ -17,4 +17,15 @@
 		liability for the usage of my app.
 		Especially I take no liability for any damage, losses and
 		drawbacks related to the usage of my app.</string>
+		
+	<!-- Preferences -->
+	<string name="pref_category_one">Preference Category 1</string>
+	<string name="pref_category_two">Preference Category 2</string>
+	<string name="pref_category_three">Preference Category 3</string>
+	<string name="pref_checkbox_title">Title</string>
+	<string name="pref_checkbox_summary">Summary</string>
+	<string name="pref_list_title">Title</string>
+	<string name="pref_list_summary">Summary</string>
+	<string name="pref_text_title">Title</string>
+	<string name="pref_text_summary">Summary</string>
 </resources>

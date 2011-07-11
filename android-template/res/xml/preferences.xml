@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+	android:key="wind_preference" android:title="@string/app_name">
+
+	<PreferenceCategory android:title="@string/pref_category_one" >
+	<CheckBoxPreference android:key="pref_checkbox_key"
+		android:title="@string/pref_checkbox_title"
+		android:summary="@string/pref_checkbox_summary"
+		android:defaultValue="false" />
+	</PreferenceCategory>
+		
+	<PreferenceCategory android:title="@string/pref_category_two">
+		<ListPreference android:entries="@array/item_list_names"
+			android:entryValues="@array/item_list_ids"
+			android:defaultValue="item1"
+			android:key="pref_list_key"
+			android:title="@string/pref_list_title"
+			android:summary="@string/pref_list_summary" />
+	</PreferenceCategory>
+	
+	<PreferenceCategory android:title="@string/pref_category_three">
+		<EditTextPreference
+			android:defaultValue="12"
+			android:key="pref_text_key"
+			android:title="@string/pref_text_title"
+			android:summary="@string/pref_text_summary" />
+	</PreferenceCategory>
+	
+</PreferenceScreen>

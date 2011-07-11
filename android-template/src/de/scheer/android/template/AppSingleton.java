@@ -10,7 +10,7 @@ import android.util.Log;
  */
 public class AppSingleton extends Application {
 	
-	private static final String LOG_TAG = "TempAppSingleton";
+	private static final String LOG_TAG = AppSingleton.class.getSimpleName();
 	
 	private String somePreference;
 	

@@ -8,13 +8,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 /**
- * Another nice Activity.<p<
+ * Another nice Activity.<p>
  * 
  * @author michael
  */
 public class SecondaryActivity extends Activity {
 	
-	private static final String LOG_TAG = "SecondaryActivity";
+	private static final String LOG_TAG = SecondaryActivity.class.getSimpleName();
 	
 	private static final int MENU_BACK = 1;
 	

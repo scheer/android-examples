@@ -24,7 +24,8 @@ import android.widget.Button;
  * <li>reference a view from java (DONE)
  * <li>i18n (DONE)
  * <li>switch between two activities with explicit intent (DONE)
- * <li>manage preferences
+ * <li>manage preferences (DONE)
+ * <li>how to use styles
  * <li>use list adapters
  * <li>how to use services
  * <p>
@@ -33,13 +34,14 @@ import android.widget.Button;
  * <li>location-aware app (Reto´s blog)
  * <li>widget example app
  * <li>live wallpaper example app
+ * <li>fragments example app
  * 
  * @author michael
  */
 public class MainActivity extends Activity {
 	
 	// each class should have a unique log tag
-	private static final String LOG_TAG = "TemplateActivity";
+	private static final String LOG_TAG = MainActivity.class.getSimpleName();
 	
 	private static final int MENU_NEXT = 1;
 	
@@ -116,6 +118,9 @@ public class MainActivity extends Activity {
 		if (MENU_INFO == item.getItemId()) {
 			showDialog(DIALOG_INFO);
 			return true;
+		}
+		if (MENU_PREFERENCES == item.getItemId()) {
+			startActivity(new Intent(getApplicationContext(), SamplePreferenceActivity.class));
 		}
 		if (MENU_NEXT == item.getItemId()) {
 			startActivity(new Intent(getApplicationContext(), SecondaryActivity.class));
