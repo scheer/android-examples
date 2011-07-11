@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+	<!-- Main Screen -->
+	<string name="button_test">Klick mich!</string>
+	<string name="button_thanks">Danke.</string>
+
+	<!-- Info Dialog -->
+	<string name="info_dialog_author">Autor: Michael Scheer</string>
+	<string name="info_dialog_dev_text">Diese App wird ständig weiterentwickelt.</string>
+	<string name="info_dialog_terms_text">(hier steht der Lizenztext) test test
+		test test test test test test test test test test test test test test test test
+		test test test test test test test test test test test test test test test test
+		test test test test test test test test test test test test test test test test</string>
+</resources>

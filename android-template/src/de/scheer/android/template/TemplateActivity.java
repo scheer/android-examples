@@ -21,7 +21,7 @@ import android.widget.Button;
  * <li>populate the options menu (DONE)
  * <li>build a generic info dialog (DONE)
  * <li>reference a view from java (DONE)
- * <li>i18n
+ * <li>i18n (DONE)
  * <li>switch between two activities with explicit intent
  * <li>manage preferences
  * <li>use list adapters
