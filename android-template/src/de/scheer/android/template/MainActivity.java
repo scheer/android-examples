@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -22,7 +23,7 @@ import android.widget.Button;
  * <li>build a generic info dialog (DONE)
  * <li>reference a view from java (DONE)
  * <li>i18n (DONE)
- * <li>switch between two activities with explicit intent
+ * <li>switch between two activities with explicit intent (DONE)
  * <li>manage preferences
  * <li>use list adapters
  * <li>how to use services
@@ -35,7 +36,7 @@ import android.widget.Button;
  * 
  * @author michael
  */
-public class TemplateActivity extends Activity {
+public class MainActivity extends Activity {
 	
 	// each class should have a unique log tag
 	private static final String LOG_TAG = "TemplateActivity";
@@ -66,7 +67,7 @@ public class TemplateActivity extends Activity {
         testButton.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(final View view) {
-				testButton.setText(getResources().getText(R.string.button_thanks));
+				testButton.setText(getText(R.string.button_thanks));
 				testButton.setClickable(false);
 			}
 		});
@@ -115,6 +116,9 @@ public class TemplateActivity extends Activity {
 		if (MENU_INFO == item.getItemId()) {
 			showDialog(DIALOG_INFO);
 			return true;
+		}
+		if (MENU_NEXT == item.getItemId()) {
+			startActivity(new Intent(getApplicationContext(), SecondaryActivity.class));
 		}
 		return false;
 	}
