@@ -9,6 +9,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 
 /**
@@ -59,6 +61,15 @@ public class TemplateActivity extends Activity {
         application = (AppSingleton) getApplication();
         setContentView(R.layout.main);
         testButton = (Button) findViewById(R.id.testButton);
+        
+        // do some action on click
+        testButton.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(final View view) {
+				testButton.setText(getResources().getText(R.string.button_thanks));
+				testButton.setClickable(false);
+			}
+		});
     }
     
     // is also called after onCreate()

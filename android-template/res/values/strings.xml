@@ -5,6 +5,7 @@
 	
 	<!-- Main Screen -->
 	<string name="button_test">Click Me!</string>
+	<string name="button_thanks">Thank You.</string>
 
 	<!-- Info Dialog -->
 	<string name="info_dialog_author">Author: Michael Scheer</string>
