@@ -28,11 +28,13 @@ import android.widget.Button;
  * <li>how to use styles
  * <li>use list adapters
  * <li>how to use services
+ * <li>gradient fill as background
  * <p>
  * <br>
  * other ideas for sample apps:<br>
  * <li>location-aware app (Reto´s blog)
  * <li>widget example app
+ * <li>custom view app
  * <li>live wallpaper example app
  * <li>fragments example app
  * 
