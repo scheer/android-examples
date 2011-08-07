@@ -14,10 +14,13 @@ public class ExampleBeanArrayAdapter extends ArrayAdapter<ExampleBean> {
 	
 	private final int resource;
 	
+	private final LayoutInflater inflater;
+	
 	public ExampleBeanArrayAdapter(final Context context, final int resource,
 			final List<ExampleBean> objects) {		
 		super(context, resource, objects);
 		this.resource = resource;
+		inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 	}
 	
 	@Override
@@ -25,7 +28,6 @@ public class ExampleBeanArrayAdapter extends ArrayAdapter<ExampleBean> {
 		final LinearLayout newView;		
 		if (convertView == null) {
 			newView = new LinearLayout(getContext());
-			final LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			inflater.inflate(resource, newView, true);
 		} else {
 			newView = (LinearLayout) convertView;
