@@ -1,24 +1,33 @@
 package de.scheer.android.template;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ListView;
 
 /**
  * Another nice Activity.<p>
  * 
  * @author michael
  */
-public class SecondaryActivity extends Activity {
+public class ListActivity extends Activity {
 	
-	private static final String LOG_TAG = SecondaryActivity.class.getSimpleName();
+	private static final String LOG_TAG = ListActivity.class.getSimpleName();
 	
 	private static final int MENU_BACK = 1;
 	
 	private AppSingleton application;
+	
+	private ListView listView;
     
     @Override
     public void onCreate(final Bundle savedInstanceState) {
@@ -27,10 +36,38 @@ public class SecondaryActivity extends Activity {
     	}
         super.onCreate(savedInstanceState);
         application = (AppSingleton) getApplication();
-        setContentView(R.layout.secondary);
+        setContentView(R.layout.list_activity);	    
+	    listView = (ListView) findViewById(R.id.list);	    
+	    populateList();	    	    
+	    listView.setOnItemClickListener(
+            new OnItemClickListener() {          
+				@Override
+				public void onItemClick(final AdapterView<?> parent, final View view,
+						final int position, final long id) {
+					
+					// Do something on click
+				}
+            });
     }
     
-    // is also called after onCreate()
+    private void populateList() {
+    	final List<ExampleBean> dummyExampleBeans = generateItems();
+		listView.setAdapter(new ExampleBeanArrayAdapter(this,
+				R.layout.list_entry, dummyExampleBeans));
+	}
+    
+    private List<ExampleBean> generateItems() {
+		final List<ExampleBean> result = new ArrayList<ExampleBean>();
+		for (int i = 1; i < 50; i++) {
+			final ExampleBean bean = new ExampleBean();
+			bean.setName("item " + i);
+			bean.setDescription("description");
+			result.add(bean);
+		}
+		return result;
+	}
+
+	// is also called after onCreate()
     @Override
 	public void onResume() {
     	if (Logging.isEnabled) {    		

@@ -14,7 +14,7 @@
 			</intent-filter>
 		</activity>
 		
-		<activity android:name=".SecondaryActivity" android:label="@string/secondary_activity" />
+		<activity android:name=".ListActivity" android:label="@string/list_activity" />
 		
 		<activity android:name=".SamplePreferenceActivity" android:label="@string/sample_preference_activity" />
 

@@ -3,7 +3,7 @@
 
 	<string name="app_name">Android Template</string>
 	<string name="main_activity">MainActivity</string>
-	<string name="secondary_activity">SecondaryActivity</string>
+	<string name="list_activity">ListActivity</string>
 	<string name="sample_preference_activity">SamplePreferenceActivity</string>
 	
 	<!-- Main Screen -->

@@ -25,8 +25,8 @@ import android.widget.Button;
  * <li>i18n (DONE)
  * <li>switch between two activities with explicit intent (DONE)
  * <li>manage preferences (DONE)
- * <li>how to use styles
- * <li>use list adapters
+ * <li>use custom list adapters (DONE)
+ * <li>how to use styles (DONE)
  * <li>how to use services
  * <li>gradient fill as background
  * <p>
@@ -125,7 +125,7 @@ public class MainActivity extends Activity {
 			startActivity(new Intent(getApplicationContext(), SamplePreferenceActivity.class));
 		}
 		if (MENU_NEXT == item.getItemId()) {
-			startActivity(new Intent(getApplicationContext(), SecondaryActivity.class));
+			startActivity(new Intent(getApplicationContext(), ListActivity.class));
 		}
 		return false;
 	}
